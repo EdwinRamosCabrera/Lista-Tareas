@@ -12,6 +12,10 @@
     --green: #2c7b90;
 }
 
+html {   
+    font-size: 62.5%; 
+}
+
 body{
     font-family: "Roboto", sans-serif;
 }
@@ -28,6 +32,7 @@ body{
     margin: auto;
     max-width: 90%;
 }
+
 .title {
     display: flex;
     gap: 5px;
@@ -37,7 +42,7 @@ body{
     font-family: "Rubik", sans-serif;
     text-align: center;
     color: #fff;
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .title img {
@@ -48,11 +53,18 @@ body{
 
 .personal-information {
     margin: 30px;
+    text-align: center;
 }
 
-h2 {
-    color: aliceblue;
+.personal-information p, .date{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.personal-information h2 {
+    color: var(--white);
     margin: 15px auto;
+    font-size: 2.5rem;
 }
 
 .add-task {
@@ -65,23 +77,31 @@ h2 {
 }
 
 .add-task input{
-    height: 40px;
+    height: 4rem;
     width: 350px;
-    border: 3px solid #19905a;
+    border: 2.5px solid #19a569;
     border-radius: 10px;
     text-align: center;
+    overflow: hidden;
+    outline: 1px solid #19cf7a;
+    font-size: 1.5rem;
 }
 
 .add-task input::placeholder {
-    font-size: 15px;
+    font-size: 1.5rem;
     color: var(--purple);
 }
 
+.add-task input:focus {
+    box-shadow: 0 1px 1px rgba(125, 235, 173, 0.075)inset, 0 0 8px rgba(18, 144, 148, 0.6);
+}
+
 .button {
-    height: 40px;
-    width: 40px;
+    height: 42px;
+    width: 42px;
+    border: none;
     border-radius: 10px;
-    background-color: rgb(99, 219, 203);
+    background-color: dodgerblue;
     font-size: 35px;
     font-weight: 800;
     color: var(--white);
@@ -90,43 +110,56 @@ h2 {
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #8f94fb;
+.button:active {
+    background-color: #19cf7a;
     transform: scale(1.1);
 }
 
 .message {
     margin: 20px;
     color: aliceblue;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
     letter-spacing: 1px;
+}
+
+.message i {
+    font-size: 17px;
+    color: rgb(223, 237, 63);
 }
 
 .tasks li {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    background: linear-gradient(to bottom, var(--blue-dark), var(--green));
     gap: 20px;
     padding: 10px 15px;
-    border-radius: 5px;
     width: 420px;
-    margin: 5px 0;
+    margin: 7px 0;
+    border: 1px solid #1c1d1d;
+    border-radius: 10px;
+    background: linear-gradient(150deg, #0b558b,#2089d3,#11588e);
 }
 
 .tasks i {
     font-size: 20px;
-    color: #fafafb;
-}
-
-.tasks i:hover {
-    color: var(--blue-light);
+    color: var(--white);
     cursor: pointer;
 }
 
-.underlined {
-    text-decoration: line-through;
-    color: var(--white);
+.tasks i:hover {
+    color: #19cf7a;
+}
+
+.text {
+    font-size: 1.5rem;
+    color : var(--white);
+}
+
+.underline {
+    text-decoration-line: line-through;
+    color : #c8c8d9;
+    text-decoration-thickness: 2px;
 }
 
 /* Animation */

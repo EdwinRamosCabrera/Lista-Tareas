@@ -10,8 +10,9 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="website icon" type="png" href="/images/verificacion.png">
     <link rel="stylesheet" media="all" href="estilos.css">
-    <title>List to do</title>
+    <title>Tareas</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
                 <img src="./images/tarea-completada.png" alt="task-complete">
             </div>
             <div class="personal-information">
-                <div class="date" id="date">Jueves 10 de Abril</div>
+                <div class="date" id="date"></div>
                 <h2>Hola, Edwin Ramos</h2>
                 <p>Vamos a cumplir tus metas</p>
             </div>
@@ -32,17 +33,16 @@
                 
             </div>
             <div class="message" id="message">
-                <p>Tienes <span id="number-tasks">0</span> tareas pendientes</p>
-                <i class="fa-regular fa-face-grin-wide"></i>
-                <i class="fa-regular fa-face-frown"></i>
+                <p>Tareas realizadas: <span id="done-tasks">0</span> <i class="fa-regular fa-face-grin-wide"></i> -
+                 Tareas pendientes <span id="pending-tasks">0</span> <i class="fa-regular fa-face-frown"></i></p>
             </div>
             <div class="tasks" id="tasks">
-                <ul id="list">
-                    <li>
+                <ul id="ul-list">
+                    <!-- <li class='li-list' id='li-list'>
                         <i class="far fa-circle co" data="done" id="0"></i>
-                        <p class="text underlined">hacer la tarea en español</p>
-                        <i class="fas fa-trash de" data="delete" id="0"></i>
-                    </li>
+                        <p class="text">hacer la tarea en español</p>
+                        <i class="fas fa-trash de" data="eliminate" id="0"></i>
+                    </li>  -->
                 </ul>
             </div>
 
