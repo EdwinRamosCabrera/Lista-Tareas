@@ -9,10 +9,10 @@ const iconCheck = 'fa-check-circle'
 const iconUncheck = 'fa-circle'
 const underline = 'underline'
 
-let id = 0
-let toDoList = []
-let pendingTask = 0
-let doneTask = 0
+let id
+let toDoList 
+let pendingTask 
+let doneTask 
 
 const currentDate = new Date()
 date.innerHTML = currentDate.toLocaleDateString('es-ES', {weekday: 'long', month:'long', day: 'numeric', year:'numeric'})
@@ -30,6 +30,7 @@ buttonTask.addEventListener('click', () => {
         })
         id++
         pendingTask++
+        localStorage.setItem('TODO', JSON.stringify(toDoList))
     }
     inputTask.value = ''
 
@@ -38,6 +39,9 @@ buttonTask.addEventListener('click', () => {
 
 
 function addTask(task, id, done, eliminate){
+    if(eliminate){ 
+        return
+    }
     const DONE = done? iconCheck : iconUncheck
     const UNDERLINE = done? underline : ''
     const element = `
@@ -64,6 +68,7 @@ document.addEventListener('keyup', function(e){
             })
             id++
             pendingTask++
+            localStorage.setItem('TODO', JSON.stringify(toDoList))
         }
         inputTask.value = ''
         numberDoneTask.textContent = doneTask;
@@ -83,8 +88,8 @@ listTask.addEventListener('click', function(e){
     } else if(iconElement.attributes.data.value  == 'eliminate'){
         taskEliminate(iconElement)
     }
+    localStorage.setItem('TODO', JSON.stringify(toDoList))
 })
-
 
 function taskDone(iconElement){
     iconElement.classList.toggle(iconUncheck)
@@ -122,3 +127,23 @@ document.addEventListener('click', () => {
     numberDoneTask.textContent = doneTask;
     numberPendingTask.textContent = pendingTask;
 })
+
+let data = localStorage.getItem('TODO')
+if(data){
+    toDoList = JSON.parse(data)
+    id = toDoList.length
+    loadList(toDoList)
+}else {
+    toDoList = []
+    id = 0
+    pendingTask = 0
+    doneTask = 0
+}
+
+function loadList(DATA){
+    DATA.forEach( function(i) {
+        addTask(i.name, i.id, i.done, i.eliminate)
+    });
+}
+
+//localStorage.clear()
