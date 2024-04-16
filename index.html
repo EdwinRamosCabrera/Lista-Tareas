@@ -1,69 +1,78 @@
 <!DOCTYPE html>
 <html lang="español">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		/>
+		<link rel="website icon" type="png" href="/images/tarea-completada.png" />
+		<link rel="stylesheet" media="all" href="estilos.css" />
+		<title>Tareas</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="website icon" type="png" href="/images/verificacion.png">
-    <link rel="stylesheet" media="all" href="estilos.css">
-    <title>Tareas</title>
-</head>
-
-<body>
-    <main>
-        <div class="context">
-            <div class="title">
-                <h1>LISTA DE TAREAS</h1>
-                <img src="./images/tarea-completada.png" alt="task-complete">
-            </div>
-            <div class="personal-information">
-                <div class="date" id="date"></div>
-                <h2>Hola, Edwin Ramos</h2>
-                <p>Vamos a cumplir tus metas</p>
-            </div>
-            <div class="add-task">
-                <input type="text" placeholder="Agregar una tarea" id="input-task" autofocus>
-                <button class="button" id="button-task">+</button>               
-                
-            </div>
-            <div class="message" id="message">
-                <p>Tareas realizadas: <span id="done-tasks">0</span> <i class="fa-regular fa-face-grin-wide"></i> -
-                 Tareas pendientes <span id="pending-tasks">0</span> <i class="fa-regular fa-face-frown"></i></p>
-            </div>
-            <div class="tasks" id="tasks">
-                <ul id="ul-list">
-                    <!-- <li class='li-list' id='li-list'>
+	<body>
+		<main>
+			<div class="context">
+				<div class="title">
+					<h1>LISTA DE TAREAS</h1>
+					<img src="./images/tareas.gif" alt="task-complete" />
+				</div>
+				<div class="personal-information">
+					<div class="date" id="date"></div>
+					<h2>Hola, Edwin Ramos</h2>
+					<p>Vamos a cumplir tus metas</p>
+				</div>
+				<div class="add-task">
+					<input
+						type="text"
+						placeholder="Agregar una tarea"
+						id="input-task"
+						autofocus
+					/>
+					<button class="button" id="button-task">+</button>
+				</div>
+				<div class="message" id="message">
+					<p>
+						Tareas realizadas: <span id="done-tasks">0</span>
+						<i class="fa-regular fa-face-grin-wide"></i> - Tareas pendientes
+						<span id="pending-tasks">0</span>
+						<i class="fa-regular fa-face-frown"></i>
+					</p>
+				</div>
+				<div class="tasks" id="tasks">
+					<ul id="ul-list">
+						<!-- <li class='li-list' id='li-list'>
                         <i class="far fa-circle co" data="done" id="0"></i>
                         <p class="text">hacer la tarea en español</p>
                         <i class="fas fa-trash de" data="eliminate" id="0"></i>
                     </li>  -->
-                </ul>
-            </div>
+					</ul>
+				</div>
+			</div>
 
-        </div>
-
-        <div class="area">
-            <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </main>
-<script src="./app.js"></script>
-</body>
-
+			<div class="area">
+				<ul class="circles">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</main>
+		<script src="./app.js"></script>
+	</body>
 </html>
